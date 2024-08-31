@@ -1,0 +1,102 @@
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the body to center content and add a background gradient */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #f0e68c);
+    color: #333;
+}
+
+/* Header styling with text-shadow for a modern look */
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling the Tic Tac Toe board as a grid with space between cells */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Styling each cell of the board */
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px; /* Rounded corners for cells */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer; /* Hand cursor to indicate interactivity */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cell hover effect for better user interaction */
+.cell:hover {
+    background-color: #ffeb3b;
+    transform: scale(1.1); /* Slightly enlarges cell on hover */
+}
+
+/* Styling the reset button */
+#reset {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth to the button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the reset button */
+#reset:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1); /* Enlarges button on hover */
+}
+
+/* Active state for reset button when clicked */
+#reset:active {
+    transform: scale(1.05); /* Slightly reduces scale to simulate button press */
+}
+
+/* Existing styles here */
+
+/* Styling for the game status message */
+#gameStatus {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hidden class to hide elements when not needed */
+.hidden {
+    display: none;
+}
